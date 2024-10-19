@@ -1,0 +1,18 @@
+[package]
+name = "chief"
+version = "0.0.0"
+authors = ["Montasir Mirghani <contact@montasir.me>"]
+edition = "2021"
+description = "chief"
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/dr-montasir/chief"
+repository = "https://github.com/dr-montasir/chief"
+readme = "README.md"
+keywords = ["config", "env", "run"]
+categories = ["development-tools"]
+
+[dependencies]
+
+[lib]
+name = "chief"
+path = "src/lib.rs"
