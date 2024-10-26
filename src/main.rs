@@ -8,7 +8,7 @@ use std::process::{exit, Command as StdCommand}; // Use a different alias for th
 /// production modes and running tests.
 fn main() {
     let matches = Command::new("Chief CLI") // Command::new for the CLI app
-        .version("0.1.0")
+        .version("0.1.1")
         .about("A CLI for managing web applications")
         .subcommand(
             Command::new("run") // Root command for running the application

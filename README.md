@@ -137,6 +137,4 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
 ## Author
 
-Dr. Montasir Mirghani
-[GitHub Profile](https://github.com/dr-montasir)
-Email: [contact@montasir.me](contact@montasir.me)
+[Dr. Montasir Mirghani](https://github.com/dr-montasir)
