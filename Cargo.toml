@@ -1,17 +1,21 @@
 [package]
 name = "chief"
-version = "0.0.0"
+version = "0.1.0"
 authors = ["Montasir Mirghani <contact@montasir.me>"]
 edition = "2021"
-description = "chief"
+description = "A Development Tools"
 license = "MIT OR Apache-2.0"
 homepage = "https://github.com/dr-montasir/chief"
 repository = "https://github.com/dr-montasir/chief"
 readme = "README.md"
-keywords = ["config", "env", "run"]
+keywords = ["run", "dev", "test", "log", "env"]
 categories = ["development-tools"]
 
 [dependencies]
+clap = { version = "4.5.20", features = ["derive"] }
+dotenv = "0.15.0"
+log = "0.4.22"
+simplelog = "0.12.2"
 
 [lib]
 name = "chief"
