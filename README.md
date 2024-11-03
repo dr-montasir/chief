@@ -1,3 +1,7 @@
+<div style="text-align: center;">
+  <a href="https://crates.io/crates/chief"><img src="logo.svg" alt="LOGO" /></a>
+</div>
+
 # Chief
 
 [<img alt="github" src="https://img.shields.io/badge/github-dr%20montasir%20/%20chief-8da0cb?style=for-the-badge&labelColor=555555&logo=github" height="22">](https://github.com/dr-montasir/chief)[<img alt="crates.io" src="https://img.shields.io/crates/v/chief.svg?style=for-the-badge&color=fc8d62&logo=rust" height="22">](https://crates.io/crates/chief)[<img alt="docs.rs" src="https://img.shields.io/badge/docs.rs-chief-66c2a5?style=for-the-badge&labelColor=555555&logo=docs.rs" height="22">](https://docs.rs/chief)[<img alt="license" src="https://img.shields.io/badge/license-apache_2.0-4a98f7.svg?style=for-the-badge&labelColor=555555&logo=apache" height="22">](https://choosealicense.com/licenses/apache-2.0)[<img alt="license" src="https://img.shields.io/badge/license-mit-4a98f7.svg?style=for-the-badge&labelColor=555555" height="22">](https://choosealicense.com/licenses/mit)
@@ -9,6 +13,7 @@
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Commands](#commands)
+- [Chief CLI Function](#chief-cli-function)
 - [Usage Examples](#usage-examples)
 - [Logging](#logging)
 - [Environment Variables](#environment-variables)
@@ -71,6 +76,44 @@ The following subcommands are available in the CLI:
   - `run prod`: Runs the application in production mode.
 
 - `test`: Runs the tests for the application.
+- `build`: Compiles the application.
+  - `build --release`: Compiles the application in release mode for optimized performance.
+- `clean`: Cleans the target directory, removing all generated artifacts.
+- `publish`: Publishes the application to the package registry.
+
+```shell
+> chief -h
+
+A CLI for managing web applications
+
+Usage: chief [COMMAND]
+
+Commands:
+  run      Runs the application
+  test     Runs the tests
+  build    Builds the application
+  clean    Cleans the project
+  publish  Publishes the application to the package registry
+  help     Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+```
+
+## Chief CLI Function
+
+The `chief_cli` function serves as the core entry point for the Chief CLI application. It initializes the command-line interface and processes user commands efficiently. By encapsulating the command-handling logic, it allows developers to focus on building their applications without worrying about the underlying command processing mechanics. This function enhances the usability of the CLI, making it easier for developers to manage their applications through intuitive commands.
+
+```rust
+use chief::chief_cli;
+
+fn main() {
+    let app_name = "example";  // Any project name can be here.
+    let app_version = "0.1.0";
+    chief_cli(app_name, app_version);
+}
+```
 
 ## Usage Examples
 

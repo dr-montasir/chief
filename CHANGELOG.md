@@ -1,3 +1,8 @@
+### v0.3.0
+
+- Improved Documentation
+- Added chief_cli function
+
 ### v0.2.0
 
 - Improved Documentation
