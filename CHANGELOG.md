@@ -1,3 +1,8 @@
+### v0.5.0
+
+- Linked the changelog file
+- Improved the documentation
+
 ### v0.4.0
 
 - Deleted the publish command

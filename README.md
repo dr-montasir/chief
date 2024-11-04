@@ -11,6 +11,7 @@
 ## Table of Contents
 
 - [Features](#features)
+- [Changelog](#changelog)
 - [Getting Started](#getting-started)
 - [Commands](#commands)
 - [Chief CLI Function](#chief-cli-function)
@@ -26,6 +27,10 @@
 - **CLI for Application Management**: Easily run applications in development or production mode and execute tests.
 - **Integrated Logging**: Utilize the `log` crate for logging at various levels and configure with the `simplelog` crate for easy setup.
 - **Environment Variable Management**: Access standard environment variables effortlessly.
+
+## Changelog
+
+[![github](https://img.shields.io/badge/github-%20changelog-8da0cb?style=for-the-badge&labelColor=555555&logo=github)](https://github.com/dr-montasir/chief/blob/main/CHANGELOG.md)
 
 ## Getting Started
 
@@ -74,11 +79,12 @@ The following subcommands are available in the CLI:
 
   - `run dev`: Runs the application in development mode.
   - `run prod`: Runs the application in production mode.
+
 - `test`: Runs the tests for the application.
 - `build`: Compiles the application.
   - `build --release`: Compiles the application in release mode for optimized performance.
 - `clean`: Cleans the target directory, removing all generated artifacts.
-- \- `help`: Print this message or the help of the given subcommand(s).
+- `help`: Print this message or the help of the given subcommand(s).
 
 ```shell
 > chief -h
