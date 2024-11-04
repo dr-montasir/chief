@@ -1,15 +1,19 @@
+### v0.4.0
+
+- Deleted the publish command
+
 ### v0.3.0
 
-- Improved Documentation
-- Added chief_cli function
+- Improved the documentation
+- Added the chief_cli function
 
 ### v0.2.0
 
-- Improved Documentation
+- Improved the documentation
 
 ### v0.1.1
 
-- Improved Documentation
+- Improved the documentation
 
 ### v0.1.0
 

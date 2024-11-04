@@ -13,6 +13,6 @@ use chief::chief_cli;
 /// <small>End Fun Doc</small>
 fn main() {
     let app_name = "chief";
-    let app_version = "0.3.0";
+    let app_version = "0.4.0";
     chief_cli(app_name, app_version);
 }

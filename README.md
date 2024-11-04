@@ -74,12 +74,11 @@ The following subcommands are available in the CLI:
 
   - `run dev`: Runs the application in development mode.
   - `run prod`: Runs the application in production mode.
-
 - `test`: Runs the tests for the application.
 - `build`: Compiles the application.
   - `build --release`: Compiles the application in release mode for optimized performance.
 - `clean`: Cleans the target directory, removing all generated artifacts.
-- `publish`: Publishes the application to the package registry.
+- \- `help`: Print this message or the help of the given subcommand(s).
 
 ```shell
 > chief -h
@@ -89,12 +88,11 @@ A CLI for managing web applications
 Usage: chief [COMMAND]
 
 Commands:
-  run      Runs the application
-  test     Runs the tests
-  build    Builds the application
-  clean    Cleans the project
-  publish  Publishes the application to the package registry
-  help     Print this message or the help of the given subcommand(s)
+  run    Runs the application
+  test   Runs the tests
+  build  Builds the application
+  clean  Cleans the project
+  help   Print this message or the help of the given subcommand(s)
 
 Options:
   -h, --help     Print help

@@ -151,7 +151,7 @@ use clap::{Arg, Command};
 /// - `build`
 ///   - `--release`: Builds the application in release mode (optional flag).
 /// - `clean`: Cleans the project directory.
-/// - `publish`: Publishes the application to the package registry.
+/// - `help`: Print this message or the help of the given subcommand(s).
 ///
 /// ### Returns
 ///
@@ -180,10 +180,7 @@ pub fn chief_cli(name: &'static str, ver: &'static str) {
                     .action(clap::ArgAction::SetTrue), // Use ArgAction to indicate it's a flag
             ),
         )
-        .subcommand(Command::new("clean").about("Cleans the project"))
-        .subcommand(
-            Command::new("publish").about("Publishes the application to the package registry"),
-        );
+        .subcommand(Command::new("clean").about("Cleans the project"));
 
     let matches = app.get_matches();
 
