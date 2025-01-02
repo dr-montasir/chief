@@ -54,6 +54,67 @@ pub use dotenv::dotenv; // Keep original without prefix.
 /// ```
 pub use std::env; // Keep original without prefix.
 
+/// Retrieves the value of an environment variable, providing a default value if the variable is not set.
+///
+/// The `env_var` function allows you to access environment variables in a safe way,
+/// returning a default value if the specified variable is not found. This is useful
+/// for providing reasonable defaults in case the environment variable is not defined.
+///
+/// # Parameters
+///
+/// - `var_name`: The name of the environment variable to retrieve.
+/// - `default`: The default value to return if the environment variable is not set.
+///
+/// # Returns
+///
+/// Returns the value of the environment variable as a `String`. If the variable is not set,
+/// the provided default value will be returned.
+///
+/// # Usage
+///
+/// You can retrieve an environment variable with a default value as follows:
+///
+/// ```rust
+/// use chief::env_var;
+///
+/// fn main() {
+///     // Retrieving an environment variable with a default value
+///     let my_var = env_var("MY_VARIABLE", "default_value");
+///
+///     println!("MY_VARIABLE: {}", my_var);
+/// }
+/// ```
+pub fn env_var(var_name: &str, default: &str) -> String {
+    env::var(var_name).unwrap_or_else(|_| default.to_string())
+}
+
+/// Loads environment variables from a `.env` file into the application's environment.
+///
+/// The `load_dotenv` function loads environment variables defined in your `.env` file,
+/// making them available to your application. This is particularly useful for managing
+/// configuration settings without hardcoding sensitive values directly into your source code.
+///
+/// # Usage
+///
+/// Call the `load_dotenv` function at the beginning of your application to ensure that
+/// the environment variables are loaded before they are accessed:
+///
+/// ```rust
+/// use chief::{load_dotenv, env_var};
+///
+/// fn main() {
+///     // Load environment variables from the .env file
+///     load_dotenv();
+///
+///     // Use env_var or access directly through std::env
+///     let my_var = env_var("MY_VARIABLE", "default_value");
+///     println!("MY_VARIABLE: {}", my_var);
+/// }
+/// ```
+pub fn load_dotenv() {
+    dotenv().ok(); // Load environment variables from a .env file
+}
+
 /// Re-exporting the `log` crate for logging functionalities.
 ///
 /// The `log` crate provides a lightweight logging facade for Rust. Users can set up loggers to capture various

@@ -1,3 +1,9 @@
+### v1.0.0
+
+- Added the load_dotenv function
+- Added the env_var function
+- Improved the documentation
+
 ### v0.5.0
 
 - Linked the changelog file

@@ -1,5 +1,8 @@
-<div style="text-align: center;">
-  <a href="https://crates.io/crates/chief"><img src="logo.svg" alt="LOGO" /></a>
+<div align="center">
+  <br>
+  <a href="https://crates.io/crates/chief">
+      <img src="logo.svg" width="100" alt="Chief Logo">
+  </a>
 </div>
 
 # Chief
@@ -179,6 +182,27 @@ fn main() {
 }
 // Output:
 // My environment variable is: my_variable
+```
+
+- **[env_var](https://docs.rs/chief/latest/chief/fn.env_var.html)**
+
+  The `env_var` function allows you to access environment variables in a safe way, returning a default value if the specified variable is not found. This is useful for providing reasonable defaults in case the environment variable is not defined.
+
+- **[load_dotenv](https://docs.rs/chief/latest/chief/fn.load_dotenv.html)**
+
+  The `load_dotenv` function loads environment variables defined in your `.env` file, making them available to your application. This is particularly useful for managing configuration settings without hardcoding sensitive values directly into your source code.
+
+```rust
+use chief::{load_dotenv, env_var};
+
+fn main() {
+    // Load environment variables from the .env file
+    load_dotenv();
+
+    // Use env_var or access directly through std::env
+    let my_var = env_var("MY_VARIABLE", "default_value");
+    println!("MY_VARIABLE: {}", my_var);
+}
 ```
 
 ## License
